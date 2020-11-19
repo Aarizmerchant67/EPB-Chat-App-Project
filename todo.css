@@ -1,16 +1,24 @@
+
 body{
 
     background-color: lightblue;
 }
 p{
-    font-family: 'Sansita Swashed', cursive;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif , "cursive";
     font-weight: 500;
     text-align: center;
 
 }
-/*making a bar with the channels name*/
-div#channels{
 
+/*making a bar with the channels name*/
+
+div#channels{
+background-color: black;
+color: white;
+top: 100px;
+left: 0;
+width: 100px;
+height: 300px;
 
 
 }
@@ -24,5 +32,13 @@ li{
     border-radius: 0.25em;
     box-shadow: 0em 0.2em 0.5em rgba(0,0,0,0.2);
 
+
     
+} 
+:hover#SpanGreychan{
+    cursor: pointer;
+
+
 }
+
+
