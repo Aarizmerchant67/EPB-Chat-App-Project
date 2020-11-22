@@ -137,6 +137,7 @@ $(function(){
             $("#login-message").hide();
             $("#list").show();
             $("#add").show();
+            $("#channels").show();
 
             let ref = database.ref("/todo/"+user.uid);
             ref.on('child_added', function(snapshot){
@@ -164,6 +165,7 @@ $(function(){
             $("#login-message").show();
             $("#list").hide().empty();
             $("#add").hide();
+            $("#channels").hide();
             if (currentUser) {
                 let ref = database.ref("/todo/"+currentUser.uid);
                 ref.off('child_added');

@@ -19,6 +19,7 @@
     <link href="todo.css" rel="stylesheet" />
 </head>
 <body>
+    
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <a href="/" class="navbar-brand">ChatBox</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
@@ -60,6 +61,8 @@
           <span class="sr-only">Next</span>
         </a>
     </div>
+    <main>
+    <article>
     <div class="container">
         <div class="row justify-content-md-between">
             <!-- <div class="col-12 col-md-8 col-lg"> -->
@@ -71,9 +74,9 @@
         <ul id="list" class="list-unstyled">
         </ul>
         <form id="add" class="input-group">
-            <input type="text" placeholder="Enter a message" class="form-control" id="adding" />
+            <input type="text" placeholder="Enter a message" class="form-control fixed-bottom" id="adding" style="position : fixed; bottom : 10px"/>
             <div class="input-group-append">
-                <button class="btn btn-success w-100">Send</button>
+                <button class="btn btn-success w-100 fixed-bottom">Send</button>
             </div>
         </form>
     </div>
@@ -143,6 +146,15 @@
             </div>
         </div>
     </div>
+    </article>
+    <aside id="channels">
+    <span style="color: grey;" onclick="location.href = self.location['href']" class="SpanGreychan" >Politics </span> </a> 
+      <br><br>
+      <span style="color: grey;" onclick="location.href = self.location['href']" class="SpanGreychan"> Climate Change</span></a> 
+    </aside>
+
+</main>
+    
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
