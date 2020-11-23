@@ -1,3 +1,4 @@
+
 body{
     margin: auto;
     background-color: lightblue;
@@ -10,6 +11,7 @@ p{
 }
 
 /*making a bar with the channels name*/
+
 aside{
 background-color: pink;
 color: white;
@@ -20,10 +22,23 @@ width: 10%;
 
 
 
+
+
+div#channels{
+background-color: black;
+color: white;
+top: 100px;
+left: 0;
+width: 100px;
+height: 300px;
+
+
+}
+
 li{
-    
     list-style: none;
     display: flex;
+
     margin-bottom: 0.5em;
     background: white;
     border-radius: 0.25em;
@@ -53,4 +68,15 @@ article{
     float: right;
     height: 400px;
     /* background-color: sandybrown; */
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 0.25em;
+    /* box-shadow: 0em 0.2em 0.5em rgba(0,0,0,0.2); */   
+}  
+:hover#SpanGreychan{
+    cursor: pointer;
+
+
 }
+
+
