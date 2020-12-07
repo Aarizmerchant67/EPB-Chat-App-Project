@@ -1,8 +1,9 @@
-
 body{
     margin: auto;
-    background-color: lightblue;
+    background: radial-gradient(50% 50%, aqua, deepskyblue);
 }
+
+
 p{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif , "cursive";
     font-weight: 500;
@@ -12,7 +13,7 @@ p{
 
 /*making a bar with the channels name*/
 
-aside{
+.row-side{
 background-color: pink;
 color: white;
 text-align: center;
@@ -38,7 +39,6 @@ height: 300px;
 li{
     list-style: none;
     display: flex;
-
     margin-bottom: 0.5em;
     background: white;
     border-radius: 0.25em;
@@ -50,6 +50,7 @@ li{
    bottom: 90px;
    left: 0;
    width: 90%;
+   background-color: sandybrown;
 }
 
 .input-group-append{
@@ -71,12 +72,21 @@ article{
     padding: 0.5em;
     margin-bottom: 0.5em;
     border-radius: 0.25em;
-    /* box-shadow: 0em 0.2em 0.5em rgba(0,0,0,0.2); */   
+    margin: right;
+    /* box-shadow:0em 0.2em 0.5em rgba(0,0,0,0.2); */  
 }  
 :hover#SpanGreychan{
     cursor: pointer;
-
-
 }
 
+/* #channels{
+    
+} */
 
+/* #add{
+    max-width: 600px;
+} */
+
+.main-body{
+    width: 70;
+}

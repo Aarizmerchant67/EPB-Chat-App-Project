@@ -43,13 +43,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://lh3.googleusercontent.com/proxy/VMjONh1uKSf0PcPg1PmlLB3iMv2Apec0yVAvkQ-NdCr4-zBs_qNL2dK1245qCK3q6SOQ85GLa8ib0kkdfFQLp1Po5FX7AAawktHZy8ZVsO73vgwqmZfiTUF9Nx4_HZHcuofnKCEMscLa8g" class="d-block w-100" alt="...">
+                <!-- <img src="https://lh3.googleusercontent.com/proxy/VMjONh1uKSf0PcPg1PmlLB3iMv2Apec0yVAvkQ-NdCr4-zBs_qNL2dK1245qCK3q6SOQ85GLa8ib0kkdfFQLp1Po5FX7AAawktHZy8ZVsO73vgwqmZfiTUF9Nx4_HZHcuofnKCEMscLa8g" class="d-block w-100" alt="..."> -->
             </div>
             <div class="carousel-item">
-                <img src="https://lh3.googleusercontent.com/proxy/JL4bxN01xND_QhJS7EVgzvT9KeWada87bk-TpyBjEgFjQB5TBvsmJvE9WXGMmGM0e1xTG8IjfudbqkfIkeBTdu2m7QvP6Qhfz6wjytK244NyWLryBv80H-uFuRt2qPxzC6mORzpPPhxPk36Uh5HF" class="d-block w-100" alt="...">
+                <!-- <img src="https://lh3.googleusercontent.com/proxy/JL4bxN01xND_QhJS7EVgzvT9KeWada87bk-TpyBjEgFjQB5TBvsmJvE9WXGMmGM0e1xTG8IjfudbqkfIkeBTdu2m7QvP6Qhfz6wjytK244NyWLryBv80H-uFuRt2qPxzC6mORzpPPhxPk36Uh5HF" class="d-block w-100" alt="..."> -->
             </div>
             <div class="carousel-item">
-                <img src="https://lh3.googleusercontent.com/proxy/dK9FRWtRhW87L34NG5MIfTy0XPJ4_5UPuOXKV7wcSgpcICd5cgk08lWcO9qu8jBM-mSey4Jxl-3Bfkp_Sbis4F7hwRF_EeqpeBd_cqc6F-bFD141T9vJZLrUfz32Bm0TLChdsdEqn55R-4PIO4m5" class="d-block w-100" alt="...">
+                <!-- <img src="https://lh3.googleusercontent.com/proxy/dK9FRWtRhW87L34NG5MIfTy0XPJ4_5UPuOXKV7wcSgpcICd5cgk08lWcO9qu8jBM-mSey4Jxl-3Bfkp_Sbis4F7hwRF_EeqpeBd_cqc6F-bFD141T9vJZLrUfz32Bm0TLChdsdEqn55R-4PIO4m5" class="d-block w-100" alt="..."> -->
             </div>
         </div>
         <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -69,18 +69,18 @@
             
         </div>
         <div class="row text-center" id="login-message">
-            <h3 class="col">Sign up to use the Chat app !</h3>
+            <h3 class="col">Sign up to use the Chat app!</h3>
         </div>
         <ul id="list" class="list-unstyled">
         </ul>
-        <form id="add" class="input-group">
-            <input type="text" placeholder="Type a message..." class="form-control fixed-bottom" id="adding" style="position : fixed; bottom : 10px"/>
+        <form id="add" class="input-group w-80 main-body">
+            <input type="text" placeholder="Type a message..." class="form-control fixed-bottom" id="adding" style="position : fixed; bottom : 10px" required />
             <div class="input-group-append">
-                <button class="btn btn-success w-100 fixed-bottom">Send</button>
+                <button class="btn btn-success w-100 fixed-bottom" id="adde">Send</button>
             </div>
         </form>
     </div>
-    <div class="modal fade" id="modal">
+    <div class="modal fade" id="modal" style="background-color: rgb(0, 255, 179);">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -101,6 +101,10 @@
                             <label>Confirm password</label>
                             <input type="password" class="form-control" id="signup-pwd-confirm" />
                         </div>
+                        <div class="form-group">
+                            <label>Display Name</label>
+                            <input type="text" class="form-control" id="signup-display-name" />
+                        </div>
                         <div class="form-group custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="signup-remember" />
                             <label class="custom-control-label" for="signup-remember">Remember me</label>
@@ -114,7 +118,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modal-login">
+    <div class="modal fade" id="modal-login" style="background-color: coral;">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -146,56 +150,59 @@
             </div>
         </div>
     </div>
+</div>
     </article>
-    <aside id="channels">
-    <span style="color: grey;" onclick="location.href = self.location['href']" class="SpanGreychan" >Politics </span> </a> 
+    <div class="row-side">
+    <span style="color: grey;"   class="SpanGreychan" id="Polotics" >Politics </span> </a> 
       <br><br>
-      <span style="color: grey;" onclick="location.href = self.location['href']" class="SpanGreychan"> Climate Change</span></a> 
-    </aside>
-
+      <span style="color: grey;" id="Climate_Change" class="SpanGreychan"> Climate Change</span></a> 
+    </div>
+    
 </main>
     
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
-
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+        
     <script>
     // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCwM2Sq7sIVU3ejZy9FgfAJVl3J7RsFV7A",
-        authDomain: "todolist-afe97.firebaseapp.com",
-        databaseURL: "https://todolist-afe97.firebaseio.com",
-        projectId: "todolist-afe97",
-        storageBucket: "todolist-afe97.appspot.com",
-        messagingSenderId: "963066725171",
-        appId: "1:963066725171:web:bf5ea0d36e2df05fcdf446"
-    };
+  var firebaseConfig = {
+    apiKey: "AIzaSyCcQZH0fu95Euxj1j6Seb044388NkJsbGQ",
+    authDomain: "am-sk-er-chat-app.firebaseapp.com",
+    databaseURL: "https://am-sk-er-chat-app.firebaseio.com",
+    projectId: "am-sk-er-chat-app",
+    storageBucket: "am-sk-er-chat-app.appspot.com",
+    messagingSenderId: "388004327742",
+    appId: "1:388004327742:web:0e7273d3a63a8132c3fc6f"
+  };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     var database = firebase.database();
     var auth = firebase.auth();
     var google = new firebase.auth.GoogleAuthProvider();
     var github = new firebase.auth.GithubAuthProvider();
-    // database.ref("/test").set({
-    //     title: "Todo List",
-    //     text: "Hello world!"
-    // });
-    // database.ref("/testing").once('value').then(function(snapshot){
-    //     let value = snapshot.val();
-    //     console.log(value.title);
-    // });
+    var currentChannel;
+    var poloticschannel = document.getElementById("Polotics").addEventListener("click" , function(){
+        currentChannel = "Politics"
 
-    // auth.createUserWithEmailAndPassword("kaamiljasani@gmail.com", "123").then(function(result){
-    //     console.log(result);
-    // }).catch(function(error){
-    //     console.log(error);
-    //     alert(error.message);
+    })
+
+    var Climate_ChangeChannel = document.getElementById("Climate_Change").addEventListener("click" , function(){
+        currentChannel = "climateChange"
+    })
+    // database.ref("/chat").set({
+    //     title : "Chat App",
+    //     text : "This is cool" 
+    // });
+    // database.ref("/chat").once('value').then(function(snapshot){
+    //     console.log(snapshot.val());
     // });
     </script>
-</body>
-</html>    </script>
+        
 </body>
 </html>
+

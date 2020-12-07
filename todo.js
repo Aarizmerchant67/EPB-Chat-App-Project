@@ -136,8 +136,9 @@ $(function(){
             $("#signin-form").hide();
             $("#login-message").hide();
             $("#list").show();
+            // $("#adding").show();
+            $(".row-side").show();
             $("#add").show();
-            $("#channels").show();
 
             let ref = database.ref("/todo/"+user.uid);
             ref.on('child_added', function(snapshot){
@@ -164,14 +165,10 @@ $(function(){
             $("#signin-form").show();
             $("#login-message").show();
             $("#list").hide().empty();
+            // $("#adding").hide();
+            $(".row-side").hide();
             $("#add").hide();
-            $("#channels").hide();
-            if (currentUser) {
-                let ref = database.ref("/todo/"+currentUser.uid);
-                ref.off('child_added');
-                ref.off('child_removed');
-                ref.off('child_changed');
-            }
+            
         }
         currentUser = user;
     });
@@ -225,5 +222,7 @@ function handlePopupError(error){
         case "auth/account-exists-with-different-credential":
             $("#login-error").text("Please sign in to link accounts.");
             break;
+        case "auth/user-not-found":
+            $("#login-error").text("Invalid email or password");
     }
 }
