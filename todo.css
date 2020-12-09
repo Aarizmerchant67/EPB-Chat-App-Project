@@ -37,12 +37,12 @@ height: 300px;
 }
 
 li{
-    list-style: none;
-    display: flex;
-    margin-bottom: 0.5em;
-    background-color: white;
-    border-radius: 0.25em;
-    box-shadow: 0em 0.2em 0.5em rgba(0,0,0,0.2);  
+    padding: 0.5em;
+    border-radius: 0.53em;
+    background-color: #f0f0f1;
+    margin-bottom: 1em;
+    max-width: 40em;
+    width: 100%;
 } 
 
 #adding{
@@ -114,4 +114,4 @@ article{
 
 .sidenav a:hover{
     color: darkblue;
-LI
+}
