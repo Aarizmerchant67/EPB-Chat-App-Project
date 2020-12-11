@@ -139,6 +139,7 @@ $(function(){
             // $("#adding").show();
             $(".row-side").show();
             $("#add").show();
+            $("#ChannelBar").show();
 
             let ref = database.ref("/todo/"+user.uid);
             ref.on('child_added', function(snapshot){
@@ -161,6 +162,7 @@ $(function(){
             });
         } else {
             console.log("No one is signed in!");
+            $("#ChannelBar").hide();
             $("#signout-form").hide();
             $("#signin-form").show();
             $("#login-message").show();
@@ -179,16 +181,16 @@ $(function(){
 });
 
 function createTodo(item, checked, ref){
-    let li = $("<li class='form-row form-inline justify-content-between mt-2' style = 'list-style: none; display: flex; padding: 0.5em; margin-bottom: 0.5em;background: blue; color:white; border-radius: 0.25em; box-shadow: 0em 0.2em 0.5em rgba(0,0,0,0.2); '></li>");
+    let li = $("<li class='form-row form-inline justify-content-between mt-2' ></li>");
     let col1 = $("<div class='custom-control custom-checkbox'></div>");
     li.append(col1);
 
     let id = ref.key;
     let input = $("<input type='checkbox' class='custom-control-input' id='" + id + "' />")
-    input.change(function(e){
-        ref.set({text:item, done:e.target.checked});
-        console.log(e.target.checked);
-    });
+    input.change((e) => {
+            ref.set({ text: item, done: e.target.checked });
+            console.log(e.target.checked);
+        });
     input.attr('checked', checked);
     col1.append(input);
 
