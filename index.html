@@ -72,7 +72,7 @@
         </div>
         <ul id="list" class="list-unstyled">
         </ul>
-        <form id="add" class="input-group w-80 main-body">
+        <form id="add" class="input-group w-80 main-body" onsubmit="FIS()">
        
             <input type="text" placeholder="Type a message..." class="form-control fixed-bottom" id="adding" style="position : fixed; bottom : 10px" required />
             <div class="input-group-append">
@@ -153,10 +153,12 @@
 </div>
     </article>
     <aside>
-    <div class="sidenav">
+    <div class="sidenav" id="ChannelBar">
         <a class="General" onclick="Genral()">#General</a>
-        <a class="General" onclick="Genral()">#General</a>
+        <a class="General" onclick="Genral();" style="color: black;">#General</a>
+        <br>
         <a id="Climate_Change" onclick="climateChange()">#Climate Change</a>
+        <br>
         <a onclick="offtopic()">#Off-Topic</a>
         </div>
     </div>
@@ -211,9 +213,22 @@
     function climateChange() {
         currentChannel = "climate_Change"
     }
-
-
+    function FIS() {
+        if(currentChannel === "climate_Change"){
+            
+        }
+        else if(currentChannel === "off-Topic"){
     
+        }
+
+
+        
+    }
+
+
+  
+  
+     
     </script>
         
 </body>
