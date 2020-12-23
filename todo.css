@@ -1,6 +1,6 @@
 body{
     margin: auto;
-    background: radial-gradient(50% 50%, aqua, deepskyblue);
+    background: radial-gradient(50% 50%, rgb(140, 255, 255), rgb(0, 191, 255));
 }
 
 
@@ -114,4 +114,8 @@ article{
 
 .sidenav a:hover{
     color: darkblue;
+}
+
+.checkbox{
+    visibility: hidden;
 }
