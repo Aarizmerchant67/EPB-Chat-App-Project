@@ -22,28 +22,48 @@
 <body>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
-         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
-            
-        <script>
-        // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyCcQZH0fu95Euxj1j6Seb044388NkJsbGQ",
-        authDomain: "am-sk-er-chat-app.firebaseapp.com",
-        databaseURL: "https://am-sk-er-chat-app.firebaseio.com",
-        projectId: "am-sk-er-chat-app",
-        storageBucket: "am-sk-er-chat-app.appspot.com",
-        messagingSenderId: "388004327742",
-        appId: "1:388004327742:web:0e7273d3a63a8132c3fc6f"
-      };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        var database = firebase.database();
-        var auth = firebase.auth();
-        var google = new firebase.auth.GoogleAuthProvider();
-        var github = new firebase.auth.GithubAuthProvider();  
-        </script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+        
+    <script>
+    // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCcQZH0fu95Euxj1j6Seb044388NkJsbGQ",
+    authDomain: "am-sk-er-chat-app.firebaseapp.com",
+    databaseURL: "https://am-sk-er-chat-app.firebaseio.com",
+    projectId: "am-sk-er-chat-app",
+    storageBucket: "am-sk-er-chat-app.appspot.com",
+    messagingSenderId: "388004327742",
+    appId: "1:388004327742:web:0e7273d3a63a8132c3fc6f"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+    var auth = firebase.auth();
+    var google = new firebase.auth.GoogleAuthProvider();
+    var github = new firebase.auth.GithubAuthProvider();
+    var currentChannel;
+    var poloticschannel = document.getElementsByClassName("General")
+    
+
+    var Climate_ChangeChannel = document.getElementById("Climate_Change").addEventListener("click" , function(){
+        currentChannel = "climateChange"
+    })
+    // database.ref("/chat").set({
+    //     title : "Chat App",
+    //     text : "This is cool" 
+    // });
+    // database.ref("/chat").once('value').then(function(snapshot){
+    //     console.log(snapshot.val());
+    // });
+    
+
+
+  
+  
+     
+    </script>
 </body>
 </html>
