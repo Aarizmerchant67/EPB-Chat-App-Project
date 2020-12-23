@@ -62,9 +62,9 @@ $(function(){
         let remember = $("#signup-remember")[0].checked;
         let persistence = remember ? firebase.auth.Auth.Persistence.LOCAL : firebase.auth.Auth.Persistence.SESSION;
         $("#signup-error").empty();
-        $("#signup-email").removeClass("is-invalid");
+        
         if (pwd !== confirm) {
-            alert("Your password and confirmation don't match!");
+            $("#signup-error").text("Your password and confirmation don't match!")
             return;
         }
         auth.setPersistence(persistence).then(result=>{
@@ -75,9 +75,6 @@ $(function(){
             }).catch(function(error){
                 // alert(error.message);
                 console.log(error);
-                if (error.code.includes("email")) {
-                    $("#signup-email").addClass("is-invalid");
-                }
                 // switch(error.code){
                 //     case "auth/invalid-email":
                 //         $("#signup-email").addClass("is-invalid");
@@ -182,7 +179,7 @@ $(function(){
 
 function createTodo(item, checked, ref){
     let li = $("<li class='form-row form-inline justify-content-between mt-2' ></li>");
-    let col1 = $("<div class='custom-control custom-checkbox'></div>");
+    let col1 = $("<div class='custom-control custom-checkbox' id='checkbox'></div>");
     li.append(col1);
 
     let id = ref.key;
@@ -193,12 +190,12 @@ function createTodo(item, checked, ref){
         });
     input.attr('checked', checked);
     col1.append(input);
-
+    
     let label = $("<label class='custom-control-label ml-1'></label>");
     label.attr("for", id);
     label.text(item);
     col1.append(label);
-
+console.countReset()
     let col2 = $("<div class='col-auto'></div>");
     li.append(col2);
 
