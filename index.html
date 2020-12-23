@@ -19,7 +19,7 @@
     <link href="todo.css" rel="stylesheet" />
 </head>
 <body>
-    
+    <main>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <a href="/" class="navbar-brand">ChatBox</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
@@ -154,12 +154,12 @@
     </article>
     <aside>
     <div class="sidenav" id="ChannelBar">
-        <a class="General" onclick="Genral()">#General</a>
-        <a class="General" onclick="Genral();" style="color: black;">#General</a>
+        <a class="General" >#General</a>
+        <a class="General" style="color: black;">#General</a>
         <br>
-        <a id="Climate_Change" onclick="climateChange()">#Climate Change</a>
+        <a id="Climate_Change">#Climate Change</a>
         <br>
-        <a onclick="offtopic()">#Off-Topic</a>
+        <a >#Off-Topic</a>
         </div>
     </div>
     
@@ -204,26 +204,7 @@
     // database.ref("/chat").once('value').then(function(snapshot){
     //     console.log(snapshot.val());
     // });
-    function Genral(){
-        currentChannel = "climateChange"
-    }  
-    function offtopic(){
-        currentChannel = "off-Topic"
-    }
-    function climateChange() {
-        currentChannel = "climate_Change"
-    }
-    function FIS() {
-        if(currentChannel === "climate_Change"){
-            
-        }
-        else if(currentChannel === "off-Topic"){
     
-        }
-
-
-        
-    }
 
 
   
