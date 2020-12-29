@@ -21,7 +21,7 @@
 <body>
     <main>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a href="/" class="navbar-brand">ChatBox</a>
+        <a href="index.html" class="navbar-brand">ChatBox</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,32 +35,7 @@
             </div>
         </div>
     </nav>
-    <div id="carousel" class="carousel slide mt-5 pt-2 mb-3" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-
-            </div>
-            <div class="carousel-item">
-              
-            </div>
-            <div class="carousel-item">
-              
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-    </div>
+ 
     <main>
     <article>
     <div class="container">
@@ -72,9 +47,8 @@
         </div>
         <ul id="list" class="list-unstyled">
         </ul>
-        <form id="add" class="input-group w-80 main-body" >
-       
-            <input type="text" placeholder="Type a message..." class="form-control fixed-bottom" id="adding" style="position : fixed; bottom : 10px" required />
+        <form id="add" class="input-group w-80 main-body">
+        <input type="text" placeholder="Type a message..." class="form-control fixed-bottom w-20" id="adding" style="position : fixed; bottom : 10px" required />
             <div class="input-group-append">
                 <button class="btn btn-primary w-100 fixed-bottom" id="adde">Send</button>
             </div>
@@ -153,15 +127,12 @@
 </div>
     </article>
     <aside>
-    <div class="sidenav" id="ChannelBar">
-        <a class="General" >#General</a>
-        <a class="General" style="color: black;">#General</a>
-        <br>
-        <a id="Climate_Change">#Climate Change</a>
-        <br>
-        <a >#Off-Topic</a>
+        <div class="sidenav" id="sidenav" style="height: 955px;">
+            <a onclick="$('.navbar-brand').html('General Channel')">#General</a>
+            <a onclick="$('.navbar-brand').html('General Channel')">#General</a>
+            <a onclick="$('.navbar-brand').html('Climate Change Channel')">#Climate Climate</a>
+            <a onclick="$('.navbar-brand').html('Coding Channel')">#Coding</a>
         </div>
-    </div>
     
 </main>
     
@@ -214,4 +185,3 @@
         
 </body>
 </html>
-
